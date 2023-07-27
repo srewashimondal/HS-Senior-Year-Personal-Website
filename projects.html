@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js">
+	</script>
+</head>
+
+<body onload="initialize();">
+
+	<div class="navbar">
+		<a href="index.html" class="nav">Home</a>
+		<a href="projects.html" class="nav">Projects</a>
+	</div>
+
+	<header class="projects-header">
+		<h1 class="title">Projects</h1>
+	</header>
+
+ <h2 style="text-align:center;color:darkorange">Here are a few projects that I created using HTML, CSS, and Javascript.</h2>
+	<div class="rockgame">
+		<h1 style="color:darkgreen;">Rock Paper Scissors Game</h1>
+		<h4>Instructions for Extreme Rock Paper Scissors</h4>
+		<p>
+			1. Each player begins with 5 of each weapon. <br />
+      2. Click on either the Rock, paper, or Scissor image under Player to make a move. <br />
+      3. The computer will choose its weapon at random. Check the log on the bottom to see who won. An example of a move is that if I play rock and my opponent plays scissor, I win the round and add the scissor to my arsenal. <br />
+      4. Remember that neither player may choose a weapon if it has exhausted its supply. <br />
+      5. If a player plays a weapon more than 3 times in a row, that weapon “breaks”. It is removed from the game. <br />
+      7. The winner of the round collects the opponent’s played weapon and adds it to their arsenal. In the event of a tie, each player recovers their own weapon. <br />
+      8. The game ends when one player has all of the weapons.<br />
+    </p>
+    </div>
+
+    <button id="reset" onclick="reset();">Click Here to Start</button>
+    <button id="reset" onclick="reset();">Click here to Reset Game</button>
+
+    <hr>
+    <div class="Game">
+
+    <h2>Player 1</h2>
+    <div id = "RockLeft">5</div>
+    <div id = "PaperLeft">5</div>
+    <div id = "ScissorsLeft">5</div>
+
+    <img src="images\rock.PNG" onclick="useRock()"width="200" height="200">
+
+    <img src="images\paper.PNG" onclick="usePaper()"width="200" height="200">
+
+    <img src="images\scissors.PNG" onclick="useScissors()"width="200" height="200">
+
+    <div id = "playerLog"></div>
+
+    <hr />
+
+    <h2>Computer</h2>
+    <div id = "computerRockLeft">5</div>
+    <div id = "computerPaperLeft">5</div>
+    <div id = "computerScissorsLeft">5</div>
+
+    <img src="images\rock(1).PNG" width="200" height="200">
+
+    <img src="images\paper(1).PNG"width="200" height="200">
+
+    <img src="images\scissors(1).PNG"width="200" height="200">
+
+    <div id = "computerLog"></div>
+
+    
+    <h3>Log</h3>
+    <div id = "log"></div>
+
+
+    <div class="money">
+      <h1 style="color:darkgreen;">Count de Money</h1>
+    <p></p>
+    <button onclick = "startMoney();"> Start Game </button>
+    <p>Total Value: <span id = "Total Value"></span></p>
+    <p>Total Penny: <span id = "Total Penny"></span></p>
+    <p>Total Nickel: <span id = "Total Nickel"></span></p>
+    <p>Total Dime: <span id = "Total Dime"></span></p>
+    <p>Total Quarter: <span id = "Total Quarter"></span></p>
+      
+
+      <button onclick = "addPenny();"> Add Penny </button>
+      <button onclick = "subtractPenny();"> Subtract Penny </button>
+      <button onclick = "addNickel();"> Add Nickel </button>
+      <button onclick = "subtractNickel();"> Subtract Nickel </button>
+      <button onclick = "addDime();"> Add Dime </button>
+      <button onclick = "subtractDime();"> Subtract Dime </button>
+      <button onclick = "addQuarter();"> Add Quarter </button>
+      <button onclick = "subtractQuarter();"> Subtract Quarter </button>
+      <button onclick = "resetMoney();"> Reset </button>
+    </div>
+
+
+  <div class="hotCold">
+      <h1 style="color:darkgreen;">Hot and Cold</h1>
+      <button onclick = "startHotCold();">Start Game</button>
+
+    <div id = "currentGuess">
+      Your current guess is: 
+      <span id = "cGuess">
+        
+      </span>
+    </div>
+
+    <div id = "guessesRemaining">
+      Number of guesses remaining: 
+      <span id = "guessesCountDown">
+        
+      </span>
+    </div>
+
+    <div id = "hotOrCold">
+      You are currently:
+      <span id = "response">
+        
+      </span>
+    </div>
+
+    <div id = "buttons">
+      <button onclick = "addN(1);">Add 1</button>
+      <button onclick = "subtractN(1);">Subtract 1</button>
+      <button onclick = "addN(5);">Add 5</button>
+      <button onclick = "subtractN(5);">Subtract 5</button>
+      <button onclick = "addN(10);">Add 10</button>
+      <button onclick = "subtractN(10);">Subtract 10</button>
+      <button onclick = "addN(25);">Add 25</button>
+      <button onclick = "subtractN(25);">Subtract 25</button>
+
+      <button onclick = "commit();">Commit</button>
+      <button onclick = "resetHotCold();">Reset</button>
+    </div>
+
+
+  </div>
+  </body>
+</html>
