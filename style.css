@@ -1,0 +1,306 @@
+.navbar {
+  display: flex;
+  justify-content: center; 
+  overflow: hidden;
+  background-color: rgb(181, 216, 255);
+  font-family: Poppins;
+  border: none; 
+ }
+
+.navbar a { 
+  float: left;
+  font-size: 35px; 
+  color: rgb(88, 90, 218);
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none; 
+  outline: none;
+  display: flex;
+  cursor: pointer;
+}
+
+.nav:hover {
+  background-color: #FFFAF0;
+  opacity: .6;
+}
+
+body {
+  font-family: 'Poppins', "sans-serif"; 
+  margin: 0;
+  background: #E6E6FA;
+}
+
+.convention-header, .projects-header, .aboutme-header {
+  height: 25em;
+  position: relative;
+}
+
+.title {
+  margin-top: 0;
+  font-family: 'Noto Sans', "sans-serif"; 
+  font-size: 5em;
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+
+.convention-header::after, .projects-header::after, .aboutme-header::after {
+  content: "";
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/461/804/901/tower-block-empire-state-building-united-states-usa-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.aboutme-header::after {
+  background-color: #96cdf8;
+  opacity: .6;
+}
+
+.projects-header::after {
+  background-image: url(https://www.bu.edu/met/files/2020/09/csit-sa-hero-1200x400.jpg);
+  opacity: .3;
+}
+
+.description-heading {
+  text-align: center;
+  font-size: 3em;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  margin: 0;
+}
+
+.expo-desc-text, .aboutme-text {
+  font-size: 1.2em;
+  margin-left:80px;
+  margin-right:80px;
+}
+
+.expo-desc-text{
+  font-size: 1.6em;
+}
+
+#javits-link {
+  text-decoration: none;
+  outline: none;
+  color: rgb(49, 112, 63);
+}
+
+#javits-link:hover {
+  background: #FFDEAD;
+  border-bottom: 1px solid;
+}
+
+.gallery-pics {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(243, 158, 186, 0.804);
+}
+
+.gallery-imgs {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.pic {
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(112, 80, 80, 0.4);
+  margin: 10px;
+  transition: .2s ease-in-out;
+}
+
+
+
+
+
+
+.flip-card {
+  margin: 15px;
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+
+  transform: rotateX(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 2px solid black;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(243, 161, 53);
+  color: white;
+  transform: rotateX(-180deg);
+
+}
+
+.card-text {
+  padding: 15px;
+}
+
+.projects-name {
+  font-size: 30px;
+}
+
+.projects-desc {
+  font-size: 23px;
+}
+
+.projects {
+  font-size: 18px;
+}
+
+.projects-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  padding: 40px;
+}
+
+.projects-info {
+  margin: 20px;
+  margin-top: 80px;
+  font-size: 24px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+}
+
+tr:nth-child(even){
+
+  background-color: #d86565;
+}
+
+tr:nth-child(3){
+
+  background-color: #d86565;
+}
+
+th {
+  background-color: rgb(235, 167, 43);
+  color: white;
+}
+
+.aboutme-button {
+  padding: 10px 20px;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+
+  color: #fff;
+  background-color: rgb(52, 106, 223);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px rgba(187, 187, 187, 0.685);
+}
+
+.aboutme-button:hover {
+  background-color: rgb(75, 97, 158)
+}
+
+.aboutme-button:active {
+  background-color: rgb(8, 69, 236);
+  transform: translateY(4px);
+}
+
+
+.aboutme-text {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+
+.aboutme-card {
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: 15px;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: .2s ease-in-out;
+  font-family: 'Georgia', "sans-serif"; 
+}
+
+
+.time {
+  color: black;
+  font-size: 22px;
+}
+
+.rockgame{
+  text-align:center;
+  font-size: 22px;
+  color:rgb(0, 0, 0);
+  font-family:Lucida Console;
+  margin: 50px;
+}
+
+.game{
+margin: 50px;
+}
+
+.money{
+  text-align:center;
+  font-size: 22px;
+  color:rgb(0, 0, 0);
+  font-family:Lucida Console;
+  margin: 50px;
+}
+
+.hotCold{
+  text-align:center;
+  font-size: 22px;
+  color:rgb(0, 0, 0);
+  font-family:Lucida Console;
+  margin: 50px;
+}
